@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "KanitCyrillic";
+  src: url(./src/fonts/KanitCyrillic/KanitCyrillic.ttf);
+}
+
+@font-face {
+  font-family: "CygreSemiBold";
+  src: url(./src/fonts/CygreSemiBold/CygreSemiBold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--header-block-color)
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #DB7611;
+  border-radius: 10px;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-top: 2rem;
+}
+
+h1 {
+  font-family: "KanitCyrillic";
+}
+
+h3 {
+  font-family: "CygreSemiBold";
+}
+
+body {
+  
+
+  background-size: 50px;
+  background-image: url(./images/bg-black.jpg);
+
+  --header-block-color: #242424;
+  --footer-block-color:#242424;
+
+
+  --button-border-color: #ba8fc2;
+  --menu-block-color: #EDE4CA;
+
+  --main-text-color: #DB7611;
+  --other-text-color: #ADADAD;
+  --title-text-color: #EDE4CA;
+
+  --icon-color: #DB7611;
+}
+
+body.light {
+  background-size: 500px;
+  background-image: url(./images/bg-white.png);
+
+  --header-block-color: #FFE5B4;
+  --footer-block-color:#FFE5B4;
+
+  --main-text-color: #000000;
+
+  --icon-color: #000000;
+}
+
+.topbth{
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  background-color: #FFE5B4;
+  padding-left: 3px;
+  left: 95%;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-75%);
+  top: 75%;
+}

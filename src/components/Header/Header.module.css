@@ -1,0 +1,114 @@
+.header {
+  background: var(--header-block-color);
+  border-bottom: 1px solid #db7611;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+  transition: all 0.3s;
+}
+
+.honeycombs {
+  position: absolute;
+  top: -0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 300px;
+}
+
+.search {
+  width: 760px;
+  height: 40px;
+  border-radius: 10px; 
+  z-index: 1;
+  border: none;
+}
+
+.header .contact_info {
+  display: flex;
+  align-items: center;
+}
+
+.header .toggleContainer {
+  margin-left: 50px; /* Регулируйте это значение по необходимости */
+}
+
+.tel {
+  font-size: 1.5rem;
+  color: #db7611;
+}
+
+.button_andt {
+  color: #DB7611;
+  background: var(--header-block-color);
+
+  border: 1px solid;
+  border-color: #DB7611;
+  border-radius: 10px;
+
+  height: 40px;
+
+  cursor: pointer;
+
+  padding: 0.8rem 2rem;
+  transition: all 0.3s;
+  font-weight: bold;
+  margin-right: 1rem;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+
+}
+
+.button_andt:hover {
+  opacity: 0.8;
+  background: #DB7611;
+}
+
+.button_andt.active {
+  background: #DB7611;
+  color: #000000;
+}
+
+.button_andt:disabled {
+  cursor: not-allowed
+}
+
+
+.toggle_label {
+  margin-right: 2.5rem;
+  display: block;
+  width: 40px;
+  height: 24px;
+  border: 1px solid #db7611;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle_label::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #db7611;
+  transition: transform 0.3s ease;
+}
+
+#toggle_btn {
+  display: none;
+}
+
+#toggle_btn:checked + .toggle_label::before {
+  transform: translateX(16px);
+}
+
+.toggle_label:hover {
+  background-color: #ADADAD;
+}
