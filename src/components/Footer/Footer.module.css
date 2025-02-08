@@ -10,10 +10,28 @@
 }
 
 .mainConteiner {
-  display: block;
+  display: flex;
+  width: 100%;
   white-space: nowrap;
   font-family: "Kanit Cyrillic";
   text-decoration: none;
+
+  padding: 0 100px; 
+}
+
+a{
+  display: flex;
+  flex-direction: column;
+}
+
+a:hover{
+  transition: 0.3s;
+  color: var(--other-text-color);
+}
+
+.block{
+  margin-right: auto;
+  float: left;
 }
 
 h1 {
@@ -39,14 +57,15 @@ h6 {
   fill: var(--main-text-color);
 }
 
+.icon:hover{
+  transition: 0.3s;
+  fill: var(--other-text-color)
+}
+
 a {
   color: var(--icon-color);
   font-size: 20px;
   text-decoration: none;
-}
-
-.leftBlock {
-  display: block;
 }
 
 .honeycombs {

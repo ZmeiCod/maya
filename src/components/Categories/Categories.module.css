@@ -1,0 +1,7 @@
+.conteiner {
+    margin: 70px;
+    margin-top: 40px;
+    background: var(--menu-block-color);
+    height: 55px;
+    border-radius: 10px;
+}

@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Чтобы блоки равномерно распределялись по строке */
+}
+
+.categoryBlock {
+    position: relative;
+    margin: 10px; /* Отступ между блоками */
+    overflow: hidden; /* Чтобы фото не вылезало за границы блока */
+}
+
+.image {
+    width: 300px;
+    height: 320px;
+    border: solid 5px #DB7611;
+    border-radius: 50px;
+}
+
+.categoryName {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #DB7611;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.categoryBlock:hover {
+    opacity: 0.3;
+}

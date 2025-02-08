@@ -5,7 +5,10 @@ import { Carousel } from "antd";
 import Arrow from "../../images/arrow.svg";
 import slider_list from "../../images//Slider/slider_list.png";
 import { useState, useEffect } from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
+import Categories from "../Categories/Categories";
+import CategoriesBlocks from "../Categories/CategoriesBlocks";
+
 
 const contentStyle = {
   marginBottom: "20px",
@@ -14,7 +17,6 @@ const contentStyle = {
   lineHeight: "160px",
   textAlign: "center",
   background: "#EDE4CA",
-  
 };
 
 const CarouselWrapper = styled(Carousel)`
@@ -22,23 +24,19 @@ const CarouselWrapper = styled(Carousel)`
     width: 20px;
     height: 20px;
     opacity: 1;
-    background: #EDE4CA;
+    background: #ede4ca;
     border-radius: 100%;
+    margin-top: 15px;
   }
   > .slick-dots li.slick-active button {
     width: 20px;
     height: 20px;
-    background: #DB7611;
+    background: #db7611;
     border-radius: 100%;
   }
 `;
 
-const CarouselList = [
-  slider_list,
-  slider_list,
-  slider_list,
-  slider_list,  
-]
+const CarouselList = [slider_list, slider_list, slider_list, slider_list];
 
 const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -63,19 +61,17 @@ const Home = () => {
     <ThemeProvider>
       <>
         <Header />
-        <CarouselWrapper autoplay style={{ marginTop: "30px" }}>
-          {
-            CarouselList.map((data, obj) => (
-              <div key={obj}>
-                 <img src={data} alt="slider list" style={contentStyle}/>
-              </div>
-            ))
-          }
+        <CarouselWrapper autoplay>
+          {CarouselList.map((data, obj) => (
+            <div key={obj}>
+              <img src={data} alt="slider list" style={contentStyle} />
+            </div>
+          ))}
         </CarouselWrapper>
+        <Categories></Categories>
         <main>
-          <h1>Тут будет титульный текст</h1>
-          <h3>Тут будет текст для описания</h3>
-          <div style={{ height: "1000px" }}></div>
+          <CategoriesBlocks></CategoriesBlocks>
+
           {scrollPosition > 400 && (
             <button onClick={scrollToTop} className="topbth">
               <img src={Arrow} alt="Top" />

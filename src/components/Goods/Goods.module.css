@@ -1,0 +1,10 @@
+.image {
+    width: 360px;
+    height: 220px;
+    border-radius: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
